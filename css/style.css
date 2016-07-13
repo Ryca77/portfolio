@@ -2,30 +2,58 @@ body {
 	background-image: url('../images/background-view2-cropped.png');
 	background-repeat: no-repeat;
 	background-size: 135%;
+	font-family: 'Merriweather Sans', sans-serif;
 }
 
 .navigation {
 	position: fixed;
 	z-index: 9999;
+	display: table;
 	width: 100%;
-	height: 75px;
+	height: 50px;
 	margin-top: 20px;
 	box-sizing: border-box;
-	background-color: #FFFFFF;
-	border: 1px solid black;
+	background-color: rgba(0,0,0,0.7);
+	border: 0.5px solid rgba(255,255,255,0.5);
 }
 
 .nav-links {
-	display: inline-block;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
 	list-style-type: none;
+	padding-right: 20px;
+}
+
+.nav-links li {
+	display: inline-block;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0.5);
+	border-left: 0.5px solid rgba(255,255,255,0.5);
+	border-right: 0.5px solid rgba(255,255,255,0.5);
+}
+
+.nav-links li:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.3);
 }
 
 .name {
-	float: left;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 18px;
+	color: #FFFFFF;
+	padding-left: 20px;
 }
 
-.nav1, .nav2, .nav3 {
-	float: right;
+.overlay {
+	
 }
 
 .me {
@@ -41,15 +69,45 @@ body {
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: rgba(255,255,255,0.5);
+	text-align: justify;
 	border: 1px solid black;
 }
 
 .projects {
 	width: 100%;
-	height: 400px;
+	height: 425px;
 	padding: 20px;
 	box-sizing: border-box;
 	border: 1px solid black;
+}
+
+.project-list {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	list-style-type: none;
+}
+
+.quiz {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 0 auto;
+	background-image: url('../images/quiz-app-still-noborder.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 40%;
+	height: 300px;
+}
+
+.city-bike {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 0 auto;
+	background-image: url('../images/bike-app-still-noborder.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 40%;
+	height: 300px;
 }
 
 .contact {
@@ -59,3 +117,35 @@ body {
 	box-sizing: border-box;
 	border: 1px solid black;
 }
+
+
+
+@media only screen and (max-width: 800px) {
+	.project-list {
+		display: block;
+		margin: 0 auto;
+	}
+	.quiz {
+		width: 70%;
+		margin-bottom: 20px;
+	}
+	.city-bike {
+		width: 70%;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.project-list {
+		display: block;
+		margin: 0 auto;
+	}
+	.quiz {
+		width: 80%;
+		height: 250px;
+	}
+	.city-bike {
+		width: 80%;
+		height: 250px;
+	}
+}	
