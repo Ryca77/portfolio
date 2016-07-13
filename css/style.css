@@ -1,13 +1,13 @@
 body {
 	background-image: url('../images/background-view2-cropped.png');
 	background-repeat: no-repeat;
-	background-size: 135%;
+	background-size: 150%;
 	font-family: 'Merriweather Sans', sans-serif;
 }
 
 .navigation {
 	position: fixed;
-	z-index: 9999;
+	z-index: 1;
 	display: table;
 	width: 100%;
 	height: 50px;
@@ -15,6 +15,22 @@ body {
 	box-sizing: border-box;
 	background-color: rgba(0,0,0,0.7);
 	border: 0.5px solid rgba(255,255,255,0.5);
+	-webkit-backdrop-filter: blur(3px);
+}
+
+.name {
+	display: table-cell;
+	vertical-align: middle;
+	width: 150px;
+	text-align: left;
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: #FFFFFF;
+	padding-left: 20px;
+}
+
+.name:hover {
+	cursor: pointer;
 }
 
 .nav-links {
@@ -45,44 +61,56 @@ body {
 }
 
 .menu-icon {
-	background-image: url(../images/menu-icon.png);
-	background-repeat: no-repeat;
-	background-size: 20px;
-	position: absolute;
 	float: right;
+	width: 30px;
+	margin-right: 20px;
+	margin-top: 14px;
+	display: none;
 }
 
-.name {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: left;
-	font-size: 18px;
-	letter-spacing: 1px;
+.menu-icon:hover {
+	cursor: pointer;
+}
+
+.menu-overlay {
+	right: 0;
+	z-index: 2;
+	position: fixed;
+	margin-right: 5px;
+	margin-top: 75px;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+	border: 0.5px solid rgba(0,0,0,0.5);
+}
+
+.menu-overlay li {
+	list-style-type: none;
+	padding: 10px;
+	line-height: 30px;
 	color: #FFFFFF;
-	padding-left: 20px;
 }
 
-.overlay {
-	
+.menu-overlay li:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.3);
 }
 
 .header {
 	width: 100%;
 	height: 450px;
 	box-sizing: border-box;
-	border: 1px solid black;
+	border-bottom: 0.5px solid rgba(0,0,0,0.5);
 }
 
 .quote-container {
-	margin-top: 200px;
-	border: 1px solid black;
+	padding-top: 150px;
 }
 
 .quote {
 	text-align: center;
 	font-family: 'Tangerine', cursive;
 	font-size: 50px;
-	line-height: 5px;
+	line-height: 30px;
 	letter-spacing: 1px;
 }
 
@@ -98,7 +126,7 @@ body {
 	box-sizing: border-box;
 	background-color: rgba(255,255,255,0.5);
 	text-align: justify;
-	border: 1px solid black;
+	border-bottom: 0.5px solid rgba(0,0,0,0.5);
 }
 
 .projects {
@@ -106,18 +134,19 @@ body {
 	height: 425px;
 	padding: 20px;
 	box-sizing: border-box;
-	border: 1px solid black;
+	border-bottom: 0.5px solid rgba(0,0,0,0.5);
 }
 
 .project-list {
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	list-style-type: none;
+	text-align: center;
 }
 
 .project-list div {
- 	cursor: pointer;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+	list-style-type: none;
+	cursor: pointer;
 }
 
 .project-list div:hover {
@@ -127,7 +156,7 @@ body {
  }
 
 .quiz {
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
 	margin: 0 auto;
 	background-image: url('../images/quiz-app-still-noborder.png');
@@ -138,7 +167,7 @@ body {
 }
 
 .city-bike {
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
 	margin: 0 auto;
 	background-image: url('../images/bike-app-still-noborder.png');
@@ -150,10 +179,17 @@ body {
 
 .contact {
 	width: 100%;
-	height: 400px;
+	height: 225px;
 	padding: 20px;
 	box-sizing: border-box;
-	border: 1px solid black;
+	background-color: rgba(255,255,255,0.5);
+	border-bottom: 0.5px solid rgba(0,0,0,0.5);
+}
+
+.linkedin, .github, .twitter {
+	width: 30px;
+	margin-top: 5px;
+	margin-right: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -162,6 +198,9 @@ body {
 	}
 	.nav-links li {
 		display: none;
+	}
+	.menu-icon {
+		display: unset;
 	}
 	.projects {
 		height: 750px;
@@ -182,7 +221,7 @@ body {
 
 @media only screen and (max-width: 450px) {
 	body {
-		background-size: 300%;
+		background-size: 350%;
 	}
 	.quote {
 		font-size: 30px;
