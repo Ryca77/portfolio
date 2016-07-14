@@ -1,13 +1,23 @@
 $(document).ready(function() {
 
-var background = document.getElementById("background");
-var speed = 1.1;
+function backgroundScroll() {
 
-window.onscroll = function()
-{
-   var yOffset = window.pageYOffset;
-   background.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
-}
+	if($(window).width() >= 800) {
+		var background = document.getElementById("background");
+		var speed = 1.1;
+
+		window.onscroll = function()
+		{
+		var yOffset = window.pageYOffset;
+		background.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
+		}
+	}
+
+	else if($(window).width() <= 800) {
+		$('#background').css('background-attachment', 'fixed');
+	}
+};
+backgroundScroll();
 
 $(".name").click(function() {
 	$('html,body').animate( {

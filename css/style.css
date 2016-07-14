@@ -1,7 +1,7 @@
 body {
 	background-image: url('../images/background-view2-cropped.png');
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 125%;
 	font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -194,7 +194,7 @@ body {
 
 @media only screen and (max-width: 800px) {
 	body {
-		background-size: 250%;
+		background-size: 200%;
 	}
 	.nav-links li {
 		display: none;
@@ -221,7 +221,7 @@ body {
 
 @media only screen and (max-width: 450px) {
 	body {
-		background-size: 350%;
+		background-size: 300%;
 	}
 	.quote {
 		font-size: 30px;
