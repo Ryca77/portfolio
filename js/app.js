@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 function backgroundScroll() {
-
 	if($(window).width() >= 800) {
 		var background = document.getElementById("background");
 		var speed = 1.1;
@@ -12,9 +11,10 @@ function backgroundScroll() {
 		background.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
 		}
 	}
-
 	else if($(window).width() <= 800) {
-		$('#background').css('background-attachment', 'fixed');
+		$(document).scroll(function() {
+			$('#background').css('background-position', '0px ' + $(document).scrollTop() + 'px');
+    	});
 	}
 };
 backgroundScroll();

@@ -194,7 +194,7 @@ body {
 
 @media only screen and (max-width: 800px) {
 	body {
-		background-size: 200%;
+		background-size: 225%;
 	}
 	.nav-links li {
 		display: none;
