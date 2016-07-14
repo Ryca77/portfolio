@@ -142,10 +142,10 @@ body {
 }
 
 .project-list div {
+	position: relative;
 	display: inline-block;
 	margin-left: 15px;
 	margin-right: 15px;
-	list-style-type: none;
 	cursor: pointer;
 }
 
@@ -153,12 +153,15 @@ body {
 	-webkit-filter: box-shadow: inset 0 0 30px #636266;
  	-moz-box-shadow: inset 0 0 30px #636266;
  	box-shadow: inset 0 0 20px #636266;
- }
+}
+
+.project-list div a {
+	z-index: 5;
+}
 
 .quiz {
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
-	margin: 0 auto;
 	background-image: url('../images/quiz-app-still-noborder.png');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -169,12 +172,25 @@ body {
 .city-bike {
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
-	margin: 0 auto;
 	background-image: url('../images/bike-app-still-noborder.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 40%;
 	height: 300px;
+}
+
+.project-list p {
+	position: absolute;
+	margin-left: 15px;
+	margin-right: 15px;
+	bottom: 0px;
+	padding: 5px;
+	border: 1px solid rgba(0,0,0,0.5);
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.7);
+	font-size: 15px;
+	color: #FFFFFF;
+	display: none;
 }
 
 .contact {
@@ -194,7 +210,7 @@ body {
 
 @media only screen and (max-width: 800px) {
 	body {
-		background-size: 225%;
+		background-size: 250%;
 	}
 	.nav-links li {
 		display: none;

@@ -56,4 +56,20 @@ $('.menu1, .menu2, .menu3').on('click', function() {
 	$('.menu-overlay').hide();
 });
 
+$('.quiz').on('mouseenter', function() {
+	$('.quiz-content').fadeIn(500);
+});
+
+$('.quiz').on('mouseleave', function() {
+	$('.quiz-content').fadeOut(500);
+});
+
+$('.city-bike').on('mouseenter', function() {
+	$('.bike-content').fadeIn(500);
+});
+
+$('.city-bike').on('mouseleave', function() {
+	$('.bike-content').fadeOut(500);
+});
+
 });
