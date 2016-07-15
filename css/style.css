@@ -155,10 +155,6 @@ body {
  	box-shadow: inset 0 0 20px #636266;
 }
 
-.project-list div a {
-	z-index: 5;
-}
-
 .quiz {
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
