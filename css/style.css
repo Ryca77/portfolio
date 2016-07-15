@@ -88,6 +88,7 @@ body {
 	padding: 10px;
 	line-height: 30px;
 	color: #FFFFFF;
+	white-space: nowrap;
 }
 
 .menu-overlay li:hover {

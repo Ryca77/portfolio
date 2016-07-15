@@ -45,10 +45,10 @@ $(".nav3, .menu3").click(function() {
 
 $('.menu-icon').on('click', function() {
 	if($('.menu-overlay').is(':hidden')) {
-		$('.menu-overlay').show();
+		$('.menu-overlay').animate({width:'toggle'});
 	}
 	else if($('.menu-overlay').is(':visible')) {
-		$('.menu-overlay').hide();
+		$('.menu-overlay').animate({width:'toggle'});
 	}
 });
 
@@ -57,7 +57,7 @@ $('.menu1, .menu2, .menu3').on('click', function() {
 });
 
 $('.quiz').on('mouseenter', function() {
-	$('.quiz-content').fadeIn(500);
+	$('.quiz-content').animate({height:'toggle'});
 });
 
 $('.quiz').on('mouseleave', function() {
@@ -65,7 +65,7 @@ $('.quiz').on('mouseleave', function() {
 });
 
 $('.city-bike').on('mouseenter', function() {
-	$('.bike-content').fadeIn(500);
+	$('.bike-content').animate({height:'toggle'});
 });
 
 $('.city-bike').on('mouseleave', function() {
