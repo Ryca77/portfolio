@@ -56,20 +56,28 @@ $('.menu1, .menu2, .menu3').on('click', function() {
 	$('.menu-overlay').hide();
 });
 
-$('.quiz').on('mouseenter', function() {
-	$('.quiz-content').animate({height:'toggle'});
-});
+function displayDescriptions() {
+	if($(window).width() >= 800) {
+		$('.quiz').on('mouseenter', function() {
+			$('.quiz-content').animate({height:'toggle'});
+		});
 
-$('.quiz').on('mouseleave', function() {
-	$('.quiz-content').fadeOut(500);
-});
+		$('.quiz').on('mouseleave', function() {
+			$('.quiz-content').fadeOut(500);
+		});
 
-$('.city-bike').on('mouseenter', function() {
-	$('.bike-content').animate({height:'toggle'});
-});
+		$('.city-bike').on('mouseenter', function() {
+			$('.bike-content').animate({height:'toggle'});
+		});
 
-$('.city-bike').on('mouseleave', function() {
-	$('.bike-content').fadeOut(500);
-});
+		$('.city-bike').on('mouseleave', function() {
+			$('.bike-content').fadeOut(500);
+		});
+	}
+	else if($(window).width() <= 800) {
+		$('.project-list p').show();
+	}
+}
+displayDescriptions()
 
 });
