@@ -43,12 +43,16 @@ $(".nav3, .menu3").click(function() {
     } ,'1000');
 });
 
-$('.menu-icon').on('click', function() {
+$('.menu-icon, .close-icon').on('click', function() {
 	if($('.menu-overlay').is(':hidden')) {
 		$('.menu-overlay').animate({width:'toggle'});
+		$('.menu-icon').animate({width:'toggle'});
+		$('.close-icon').delay(500).animate({width: 'toggle'});
 	}
 	else if($('.menu-overlay').is(':visible')) {
 		$('.menu-overlay').animate({width:'toggle'});
+		$('.close-icon').animate({width: 'toggle'});
+		$('.menu-icon').delay(500).animate({width: 'toggle'});
 	}
 });
 
