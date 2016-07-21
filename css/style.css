@@ -153,8 +153,6 @@ body {
 .project-list div {
 	position: relative;
 	display: inline-block;
-	margin-left: 15px;
-	margin-right: 15px;
 	cursor: pointer;
 }
 
@@ -164,24 +162,36 @@ body {
  	box-shadow: inset 0 0 20px #636266;
 }
 
-.quiz {
+.project-container {
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5px;
+	width: 40%;
+	height: 300px;
+	margin-left: 15px;
+	margin-right: 15px;
+	overflow: hidden;
+}
+
+.quiz {
 	background-image: url('../images/quiz-app-still-noborder.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 40%;
-	height: 300px;
+	width: 100%;
+	height: 100%;
+	transition: 1.5s ease-in-out;
 }
 
 .city-bike {
-	border: 1px solid rgba(0,0,0,0.5);
-	border-radius: 5px;
 	background-image: url('../images/bike-app-still-noborder.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 40%;
-	height: 300px;
+	width: 100%;
+	height: 100%;
+	transition: 1.5s ease-in-out;
+}
+
+.quiz:hover, .city-bike:hover {
+	transform: scale(1.3);
 }
 
 .project-list p {
@@ -230,11 +240,7 @@ body {
 		display: block;
 		margin: 0 auto;
 	}
-	.quiz {
-		width: 70%;
-		margin-bottom: 20px;
-	}
-	.city-bike {
+	.project-container {
 		width: 70%;
 		margin-bottom: 20px;
 	}
@@ -257,11 +263,7 @@ body {
 		display: block;
 		margin: 0 auto;
 	}
-	.quiz {
-		width: 80%;
-		height: 250px;
-	}
-	.city-bike {
+	.project-container {
 		width: 80%;
 		height: 250px;
 	}
