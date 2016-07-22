@@ -46,18 +46,20 @@ $(".nav3, .menu3").click(function() {
 $('.menu-icon, .close-icon').on('click', function() {
 	if($('.menu-overlay').is(':hidden')) {
 		$('.menu-overlay').animate({width:'toggle'});
-		$('.menu-icon').animate({width:'toggle'});
+		$('.menu-icon').animate({height:'toggle'});
 		$('.close-icon').delay(500).animate({width: 'toggle'});
 	}
 	else if($('.menu-overlay').is(':visible')) {
 		$('.menu-overlay').animate({width:'toggle'});
 		$('.close-icon').animate({width: 'toggle'});
-		$('.menu-icon').delay(500).animate({width: 'toggle'});
+		$('.menu-icon').delay(500).animate({height: 'toggle'});
 	}
 });
 
 $('.menu1, .menu2, .menu3').on('click', function() {
 	$('.menu-overlay').hide();
+	$('.close-icon').animate({width: 'toggle'});
+	$('.menu-icon').delay(500).animate({height: 'toggle'});
 });
 
 function displayDescriptions() {

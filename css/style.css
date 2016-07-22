@@ -156,10 +156,8 @@ body {
 	cursor: pointer;
 }
 
-.project-list div:hover {
-	-webkit-filter: box-shadow: inset 0 0 30px #636266;
- 	-moz-box-shadow: inset 0 0 30px #636266;
- 	box-shadow: inset 0 0 20px #636266;
+.project-container div:hover {
+	-webkit-filter: blur(3px);
 }
 
 .project-container {
