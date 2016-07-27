@@ -1,25 +1,26 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "css/index.less",
+  "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdir": "mkdir -p build",
-    "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css",
+    "build": "npm run clean && npm run mkdir && npm run move && npm run build:html && npm run build:css",
     "watch": "npm run watch:html & npm run watch:css",
     "clean": "rm -rf build",
     "build:html": "npm run clean:html && cp index.html build/",
     "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
     "clean:html": "rm -f build/index.html",
+    "move": "cp -R images build/ && cp -R js build/",
     "build:css": "npm run build:css:unminified && npm run build:css:minified",
     "watch:css": "npm run watch:css:unminified & npm run watch:css:minified",
     "clean:css": "npm run clean:css:unminified && npm run clean:css:minified",
-    "build:css:unminified": "npm run clean:css:unminified && lessc --source-map css/index.less build/$npm_package_name.$npm_package_version.css",
+    "build:css:unminified": "npm run clean:css:unminified && lessc --source-map css/index.less build/css/style.css",
     "watch:css:unminified": "npm run build:css:unminified && chokidar 'css/**/*.(css|less)' -c 'npm run build:css:unminified'",
-    "clean:css:unminified": "rm -f build/$npm_package_name.$npm_package_version.css build/$npm_package_name.$npm_package_version.css.map",
-    "build:css:minified": "npm run clean:css:minified && lessc --clean-css --source-map css/index.less build/$npm_package_name.$npm_package_version.min.css",
+    "clean:css:unminified": "rm -f build/css/style.css build/css/style.css.map",
+    "build:css:minified": "npm run clean:css:minified && lessc --clean-css --source-map css/index.less build/css/style.min.css",
     "watch:css:minified": "npm run build:css:minified && chokidar 'css/**/*.(css|less)' -c 'npm run build:css:minified'",
-    "clean:css:minified": "rm -f build/$npm_package_name.$npm_package_version.min.css build/$npm_package_name.$npm_package_version.min.css.map"
+    "clean:css:minified": "rm -f build/css/style.min.css build/css/style.min.css.map"
   },
   "repository": {
     "type": "git",
